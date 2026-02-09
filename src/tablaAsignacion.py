@@ -6,4 +6,13 @@ class TablaAsignacion:
         
     def getTabla(self):
         return self.tabla
+    
 
+    def getLetra(self, posicion):
+        
+        
+        if posicion <= 22 and posicion >= 0: 
+            return self.tabla[posicion]
+        else:
+            return "Posicion letra fuera de rango"
+            
