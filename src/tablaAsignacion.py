@@ -17,3 +17,11 @@ class TablaAsignacion:
     
     def isLetraPermitida(self, letra):
         return letra in self.tabla
+
+    def calcularLetra(self, numeroDni):
+        dniInt = int(numeroDni) 
+        posicion = dniInt % len(self.tabla)
+        letraCorrespondiente = self.tabla[posicion]
+        return letraCorrespondiente
+
+
