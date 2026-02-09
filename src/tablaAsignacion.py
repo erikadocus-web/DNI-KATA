@@ -11,7 +11,7 @@ class TablaAsignacion:
     def getLetra(self, posicion):
         
         
-        if posicion <= 22 and posicion >= 0: 
+        if posicion < len(self.tabla): 
             return self.tabla[posicion]
         else:
             return "Posicion letra fuera de rango"
