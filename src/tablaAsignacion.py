@@ -10,10 +10,7 @@ class TablaAsignacion:
 
     def getLetra(self, posicion):
         
-        if posicion < len(self.tabla): 
-            return self.tabla[posicion]
-        else:
-            return "Posicion letra fuera de rango"
+        return self.tabla[posicion] if posicion < len(self.tabla) else "Posicion letra fuera de rango"
         
     def getModulo(self):
         return len(self.tabla)
