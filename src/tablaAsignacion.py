@@ -1,0 +1,27 @@
+class TablaAsignacion:
+
+    def __init__(self):
+        self.tabla = ["T","R","W","A","G","M","Y","F","P","D","X","B",
+                      "N","J","Z","S","Q","V","H","L","C","K","E"]
+        
+    def getTabla(self):
+        return self.tabla
+    
+
+    def getLetra(self, posicion):
+        
+        return self.tabla[posicion] if posicion < len(self.tabla) else "Posicion letra fuera de rango"
+        
+    def getModulo(self):
+        return len(self.tabla)
+    
+    def isLetraPermitida(self, letra):
+        return letra in self.tabla
+
+    def calcularLetra(self, numeroDni):
+        dniInt = int(numeroDni) 
+        posicion = dniInt % len(self.tabla)
+        letraCorrespondiente = self.tabla[posicion]
+        return letraCorrespondiente
+
+
